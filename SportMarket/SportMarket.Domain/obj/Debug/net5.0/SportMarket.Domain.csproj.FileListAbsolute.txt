@@ -1,0 +1,15 @@
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\bin\Debug\net5.0\SportMarket.Domain.deps.json
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\bin\Debug\net5.0\SportMarket.Domain.runtimeconfig.json
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\bin\Debug\net5.0\SportMarket.Domain.runtimeconfig.dev.json
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\bin\Debug\net5.0\SportMarket.Domain.dll
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\bin\Debug\net5.0\ref\SportMarket.Domain.dll
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\bin\Debug\net5.0\SportMarket.Domain.pdb
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\obj\Debug\net5.0\SportMarket.Domain.csproj.AssemblyReference.cache
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\obj\Debug\net5.0\SportMarket.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\obj\Debug\net5.0\SportMarket.Domain.AssemblyInfoInputs.cache
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\obj\Debug\net5.0\SportMarket.Domain.AssemblyInfo.cs
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\obj\Debug\net5.0\SportMarket.Domain.csproj.CoreCompileInputs.cache
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\obj\Debug\net5.0\SportMarket.Domain.dll
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\obj\Debug\net5.0\ref\SportMarket.Domain.dll
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\obj\Debug\net5.0\SportMarket.Domain.pdb
+C:\Users\huawei\source\repos\SportMarket\SportMarket.Domain\obj\Debug\net5.0\SportMarket.Domain.genruntimeconfig.cache
