@@ -1,0 +1,50 @@
+<div id="container">
+  <div id="filter">
+    <input [(ngModel)]="name" placeholder="Imie" />
+    <button id="buttonStyle" (click)="Filter(name)">szukaj</button>
+  </div>
+  <div id="table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">FirstName</th>
+          <th scope="col">LastName</th>
+          <th scope="col">AcademicTitle</th>
+          <th scope="col">Email</th>
+          <th scope="col">PhoneNumber</th>
+          <th scope="col">Specialization</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of DoctorsList">
+        <tr>
+          <th scope="row">{{item.id}}</th>
+          <td>{{item.firstName}}</td>
+          <td>{{item.lastName}}</td>
+          <td>{{item.academicTitle}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.phoneNumber}}</td>
+          <td>{{item.specialization}}</td>
+          <td>
+            <button id="buttonStyle" (click)="Update(item.id, doctor.FirstName, doctor.LastName, doctor.AcademicTitle,
+                  doctor.Email, doctor.PhoneNumber, doctor.Specialization)">
+              Edytuj
+            </button>
+            <button id="buttonStyle" (click)="Remove(item.id)">Usuń</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="inputs">
+    <input id="inputStyle" [(ngModel)]="doctor.FirstName" placeholder="Imie" />
+    <input id="inputStyle" [(ngModel)]="doctor.LastName" placeholder="Nazwisko" />
+    <input id="inputStyle" [(ngModel)]="doctor.AcademicTitle" placeholder="Tytuł naukowy" />
+    <br />
+    <input id="inputStyle" [(ngModel)]="doctor.Email" placeholder="Adres email" />
+    <input id="inputStyle" [(ngModel)]="doctor.PhoneNumber" placeholder="Numer Telefonu" />
+    <input id="inputStyle" [(ngModel)]="doctor.Specialization" placeholder="Specjalizacja" />
+  </div>
+  <button id="buttonStyle" (click)="AddDoctor()">Dodaj</button>
+</div>

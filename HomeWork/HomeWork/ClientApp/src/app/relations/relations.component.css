@@ -1,0 +1,30 @@
+#container {
+  height: 100%;
+  Width: 100%;
+  text-align: center;
+}
+
+#table {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  height:45%
+}
+
+#inputs {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  height:45%;
+  text-align: center;
+}
+
+
+#inputStyle {
+  margin: 5px;
+}
+
+#buttonStyle {
+  border-radius: 10%;
+  margin: 5px;
+}

@@ -1,0 +1,51 @@
+<div id="container">
+
+  <div id="table">
+    <div id="filter">
+      <input [(ngModel)]="name" placeholder="Nazwa Placówki" />
+      <button id="buttonStyle" (click)="Filter(name)">szukaj</button>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Street</th>
+          <th scope="col">House Number</th>
+          <th scope="col">Place</th>
+          <th scope="col">Zip Code</th>
+          <th scope="col">Voivodeship</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of WorkPlaces">
+        <tr>
+          <th scope="row">{{item.id}}</th>
+          <td>{{item.name}}</td>
+          <td>{{item.street}}</td>
+          <td>{{item.houseNumber}}</td>
+          <td>{{item.place}}</td>
+          <td>{{item.zipCode}}</td>
+          <td>{{item.voivodeship}}</td>
+          <td>
+            <button id="buttonStyle" (click)="Update(item.id, workPlace.Name, workPlace.Street, workPlace.HouseNumber,
+                  workPlace.Place, workPlace.ZipCode, workPlace.Voivodeship)">
+              Edytuj
+            </button>
+            <button id="buttonStyle" (click)="Remove(item.id)">Usuń</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="inputs">
+    <input id="inputStyle" [(ngModel)]="workPlace.Name" placeholder="Nazwa" />
+    <input id="inputStyle" [(ngModel)]="workPlace.Street" placeholder="Ulica" />
+    <input id="inputStyle" [(ngModel)]="workPlace.HouseNumber" placeholder="Numer Domu" />
+    <br/>
+    <input id="inputStyle" [(ngModel)]="workPlace.Place" placeholder="Miasto" />
+    <input id="inputStyle" [(ngModel)]="workPlace.ZipCode" placeholder="Kod Pocztowy" />
+    <input id="inputStyle" [(ngModel)]="workPlace.VoivodeShip" placeholder="Województwo" />
+  </div>
+  <button id="buttonStyle" (click)="AddWorkPlace()">Dodaj</button>
+</div>

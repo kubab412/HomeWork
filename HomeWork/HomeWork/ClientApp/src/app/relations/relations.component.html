@@ -1,0 +1,30 @@
+<div id="container">
+  <div id="table">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Imie</th>
+      <th scope="col">Nazwisko</th>
+      <th scope="col">Nazwa firmy</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of RelationList">
+    <tr>
+      <th scope="row">{{item.firstName}}</th>
+      <td>{{item.lastName}}</td>
+      <td>{{item.name}}</td>
+      <td>
+        <button id="buttonStyle" (click)="Remove(item.id)">Usuń</button>
+      </td>
+      </tr>
+    </tbody>
+</table>
+    </div>
+  <div id="inputs">
+<input id="inputStyle" [(ngModel)]="relation.FirstName" placeholder="Imie doktora"/>
+<input id="inputStyle" [(ngModel)]="relation.Name" placeholder="Nazwa placówki"/>
+<button id="buttonStyle" (click)="AddRelation()">dodaj</button>
+  </div>
+  </div>
+  

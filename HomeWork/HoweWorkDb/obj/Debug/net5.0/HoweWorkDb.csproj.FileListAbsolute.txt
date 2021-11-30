@@ -1,0 +1,15 @@
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\bin\Debug\net5.0\HoweWorkDb.deps.json
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\bin\Debug\net5.0\HoweWorkDb.dll
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\bin\Debug\net5.0\ref\HoweWorkDb.dll
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\bin\Debug\net5.0\HoweWorkDb.pdb
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\obj\Debug\net5.0\HoweWorkDb.csproj.AssemblyReference.cache
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\obj\Debug\net5.0\HoweWorkDb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\obj\Debug\net5.0\HoweWorkDb.AssemblyInfoInputs.cache
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\obj\Debug\net5.0\HoweWorkDb.AssemblyInfo.cs
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\obj\Debug\net5.0\HoweWorkDb.csproj.CoreCompileInputs.cache
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\obj\Debug\net5.0\HoweWorkDb.dll
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\obj\Debug\net5.0\ref\HoweWorkDb.dll
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\obj\Debug\net5.0\HoweWorkDb.pdb
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\bin\Debug\net5.0\HomeWork.Domain.dll
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\bin\Debug\net5.0\HomeWork.Domain.pdb
+C:\Users\huawei\source\repos\HomeWork\HoweWorkDb\obj\Debug\net5.0\HoweWorkDb.csproj.CopyComplete

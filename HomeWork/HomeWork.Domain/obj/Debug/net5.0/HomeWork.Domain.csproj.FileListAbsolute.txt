@@ -1,0 +1,12 @@
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\bin\Debug\net5.0\HomeWork.Domain.deps.json
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\bin\Debug\net5.0\HomeWork.Domain.dll
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\bin\Debug\net5.0\ref\HomeWork.Domain.dll
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\bin\Debug\net5.0\HomeWork.Domain.pdb
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\obj\Debug\net5.0\HomeWork.Domain.csproj.AssemblyReference.cache
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\obj\Debug\net5.0\HomeWork.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\obj\Debug\net5.0\HomeWork.Domain.AssemblyInfoInputs.cache
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\obj\Debug\net5.0\HomeWork.Domain.AssemblyInfo.cs
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\obj\Debug\net5.0\HomeWork.Domain.csproj.CoreCompileInputs.cache
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\obj\Debug\net5.0\HomeWork.Domain.dll
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\obj\Debug\net5.0\ref\HomeWork.Domain.dll
+C:\Users\huawei\source\repos\HomeWork\HomeWork.Domain\obj\Debug\net5.0\HomeWork.Domain.pdb
