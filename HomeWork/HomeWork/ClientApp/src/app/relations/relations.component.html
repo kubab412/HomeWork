@@ -22,9 +22,13 @@
 </table>
     </div>
   <div id="inputs">
-<input id="inputStyle" [(ngModel)]="relation.FirstName" placeholder="Imie doktora"/>
-<input id="inputStyle" [(ngModel)]="relation.Name" placeholder="Nazwa placówki"/>
-<button id="buttonStyle" (click)="AddRelation()">dodaj</button>
+<select [(ngModel)]="doctor.id"><option *ngFor="let item1 of DoctorList" [value]="item1.id">
+ {{item1.academicTitle}} {{item1.firstName}} {{item1.lastName}} {{item1.email}} {{item1.phoneNumber}} {{item1.specialization}}
+  </option></select>
+    <select [(ngModel)]="workPlace.id"><option *ngFor="let item2 of WorkPlaceList" [value]="item2.id">
+      {{item2.name}} {{item2.place}} {{item2.street}} {{item2.houseNumber}} {{item2.zipCode}} {{item2.voivodeship}}
+      </option></select>
+<button id="buttonStyle" (click)="AddRelation(doctor.id, workPlace.id)">dodaj</button>
   </div>
   </div>
   

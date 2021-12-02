@@ -4,5 +4,5 @@ export class Relations {
   WorkPlaceId: number;
   FirstName: String;
   LastName: String;
-  Name: String;
+  Name: string;
 }

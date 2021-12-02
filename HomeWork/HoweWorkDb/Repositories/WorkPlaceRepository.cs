@@ -19,7 +19,7 @@ namespace HoweWorkDb.Repositories
             using (MySqlConnection conn = _db.GetConnection())
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("Select * from WorkPlace", conn);
+                MySqlCommand cmd = new MySqlCommand("Select * from workplace", conn);
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -27,10 +27,10 @@ namespace HoweWorkDb.Repositories
                     {
                         list.Add(new WorkPlace()
                         {
-                            Id = Convert.ToInt32(reader["Id"]),
+                            Id = Convert.ToInt32(reader["WorkPlaceId"]),
                             Name = reader["Name"].ToString(),
                             Street = reader["Street"].ToString(),
-                            HouseNumber = Convert.ToInt32(reader["Id"]),
+                            HouseNumber = Convert.ToInt32(reader["HouseNumber"]),
                             Place = reader["Place"].ToString(),
                             ZipCode = Convert.ToInt32(reader["ZipCode"]),
                             Voivodeship = reader["Voivodeship"].ToString()
@@ -60,10 +60,10 @@ namespace HoweWorkDb.Repositories
                         {
                             list.Add(new WorkPlace()
                             {
-                                Id = Convert.ToInt32(reader["Id"]),
+                                Id = Convert.ToInt32(reader["WorkPlaceId"]),
                                 Name = reader["Name"].ToString(),
                                 Street = reader["Street"].ToString(),
-                                HouseNumber = Convert.ToInt32(reader["Id"]),
+                                HouseNumber = Convert.ToInt32(reader["HouseNumber"]),
                                 Place = reader["Place"].ToString(),
                                 ZipCode = Convert.ToInt32(reader["ZipCode"]),
                                 Voivodeship = reader["Voivodeship"].ToString()
@@ -82,7 +82,7 @@ namespace HoweWorkDb.Repositories
             using (MySqlConnection conn = _db.GetConnection())
             {
                 using (MySqlCommand cmd = new MySqlCommand(
-                    "INSERT INTO `workplace` (`Id`, `Name`, `Street`, `HouseNumber`, `Place`, `ZipCode`, `Voivodeship`) " +
+                    "INSERT INTO `workplace` (`WorkPlaceId`, `Name`, `Street`, `HouseNumber`, `Place`, `ZipCode`, `Voivodeship`) " +
                     "VALUES (NULL, @workPlace.Name, @workPlace.Street, @workPlace.HouseNumber, @workPlace.Place, @workPlace.ZipCode, @workPlace.Voivodeship);"))
                 {
                     using (MySqlDataAdapter sda = new MySqlDataAdapter())
@@ -106,8 +106,8 @@ namespace HoweWorkDb.Repositories
             using (MySqlConnection conn = _db.GetConnection())
             {
                 using (MySqlCommand cmd = new MySqlCommand(
-                    "UPDATE workplace Set Id = @workPlace.Id, Name = @workPlace.Name, Street = @workPlace.Street, HouseNumber = @workPlace.HouseNumber, " +
-                    "Place = @workPlace.Place, ZipCode = @workPlace.ZipCode, Voivodeship = @workPlace.Voivodeship WHERE Id = @workPlace.Id"))
+                    "UPDATE workplace Set WorkPlaceId = @workPlace.Id, Name = @workPlace.Name, Street = @workPlace.Street, HouseNumber = @workPlace.HouseNumber, " +
+                    "Place = @workPlace.Place, ZipCode = @workPlace.ZipCode, Voivodeship = @workPlace.Voivodeship WHERE WorkPlaceId = @workPlace.Id"))
                 {
                     using (MySqlDataAdapter sda = new MySqlDataAdapter())
                     {
@@ -131,7 +131,7 @@ namespace HoweWorkDb.Repositories
             using (MySqlConnection conn = _db.GetConnection())
             {
                 using (MySqlCommand cmd = new MySqlCommand(
-                    "Delete FROM workplace Where Id = @id"))
+                    "Delete FROM workplace Where WorkPlaceId = @id"))
                 {
                     using (MySqlDataAdapter sda = new MySqlDataAdapter())
                     {

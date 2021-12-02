@@ -9,13 +9,9 @@ namespace HoweWorkDb.Repositories
     public class RelationsRepository
     {
         private readonly HomeWorkContext _db;
-        private readonly DoctorsRepository _doctors;
-        private readonly WorkPlaceRepository _workPlace;
-        public RelationsRepository(HomeWorkContext db, DoctorsRepository doctors, WorkPlaceRepository workPlace)
+        public RelationsRepository(HomeWorkContext db)
         {
             _db = db;
-            _doctors = doctors;
-            _workPlace = workPlace;
         }
 
         public List<Relations> GetAll()
@@ -24,9 +20,11 @@ namespace HoweWorkDb.Repositories
             using (MySqlConnection conn = _db.GetConnection())
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT relations.Id, doctors.FirstName, doctors.LastName, workplace.Name From ((doctors " +
-                    "INNER JOIN relations ON doctors.Id = relations.DoctorId)" +
-                    "INNER JOIN workplace ON workplace.Id = relations.WorkPlaceId)", conn);
+                MySqlCommand cmd = new MySqlCommand("SELECT relations.Id, doctors.DoctorsId, workplace.WorkPlaceId, doctors.FirstName, doctors.LastName, doctors.AcademicTitle, " +
+                    "doctors.Email, doctors.PhoneNumber, doctors.Specialization, workplace.Name, workplace.Street, workplace.HouseNumber, " +
+                    "workplace.Place, workplace.ZipCode, workplace.Voivodeship From ((doctors " +
+                    "INNER JOIN relations ON doctors.DoctorsId = relations.doctorId) " +
+                    "INNER JOIN workplace ON workplace.WorkPlaceId = relations.workPlaceId)", conn);
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -35,6 +33,8 @@ namespace HoweWorkDb.Repositories
                         list.Add(new Relations()
                         {
                             Id = Convert.ToInt32(reader["Id"]),
+                            DoctorId = Convert.ToInt32(reader["DoctorsId"]),
+                            WorkPlaceId = Convert.ToInt32(reader["WorkPlaceId"]),
                             FirstName = reader["FirstName"].ToString(),
                             LastName = reader["LastName"].ToString(),
                             Name = reader["Name"].ToString(),
@@ -46,22 +46,20 @@ namespace HoweWorkDb.Repositories
             return list;
         }
 
-        public void Insert(string name, string placeName)
+        public void Insert(int doctorId, int workPlaceId)
         {
             using (MySqlConnection conn = _db.GetConnection())
             {
                 using (MySqlCommand cmd = new MySqlCommand(
-                    "INSERT INTO `relations` (`Id`, `DoctorId`, `WorkPlaceId`) " +
+                    "INSERT INTO `relations` (Id, doctorId, workPlaceId) " +
                     "VALUES (NULL, @DoctorId, @WorkPlaceId);"))
                 {
                     using (MySqlDataAdapter sda = new MySqlDataAdapter())
                     {
                         cmd.Connection = conn;
                         conn.Open();
-                        var doctor = _doctors.GetAll().Where(x => x.FirstName == name).Select(x => x.Id).FirstOrDefault();
-                        var workPlace = _workPlace.GetAll().Where(x => x.Name == placeName).Select(x => x.Id).FirstOrDefault();
-                        cmd.Parameters.AddWithValue("@DoctorId", doctor);
-                        cmd.Parameters.AddWithValue("@WorkPlaceId", workPlace);
+                        cmd.Parameters.AddWithValue("@DoctorId", doctorId);
+                        cmd.Parameters.AddWithValue("@WorkPlaceId", workPlaceId);
                         cmd.ExecuteNonQuery();
                         conn.Close();
                     }

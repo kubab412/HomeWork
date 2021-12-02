@@ -29,7 +29,7 @@ namespace HoweWorkDb.Repositories
                     {
                         list.Add(new Doctors()
                         {
-                            Id = Convert.ToInt32(reader["Id"]),
+                            Id = Convert.ToInt32(reader["DoctorsId"]),
                             FirstName = reader["FirstName"].ToString(),
                             LastName = reader["LastName"].ToString(),
                             AcademicTitle = reader["AcademicTitle"].ToString(),
@@ -61,7 +61,7 @@ namespace HoweWorkDb.Repositories
                         {
                             list.Add(new Doctors()
                             {
-                                Id = Convert.ToInt32(reader["Id"]),
+                                Id = Convert.ToInt32(reader["DoctorsId"]),
                                 FirstName = reader["FirstName"].ToString(),
                                 LastName = reader["LastName"].ToString(),
                                 AcademicTitle = reader["AcademicTitle"].ToString(),
@@ -81,7 +81,7 @@ namespace HoweWorkDb.Repositories
             using (MySqlConnection conn = _db.GetConnection())
             {
                 using (MySqlCommand cmd = new MySqlCommand(
-                    "INSERT INTO `doctors` (`Id`, `FirstName`, `LastName`, `AcademicTitle`, `Email`, `PhoneNumber`, `Specialization`) " +
+                    "INSERT INTO `doctors` (`DoctorsId`, `FirstName`, `LastName`, `AcademicTitle`, `Email`, `PhoneNumber`, `Specialization`) " +
                     "VALUES (NULL, @doctor.FirstName, @doctor.LastName, @doctor.AcademicTitle, @doctor.Email, @doctor.PhoneNumber, @doctor.Specialization);"))
                 {
                     using (MySqlDataAdapter sda = new MySqlDataAdapter())
@@ -105,8 +105,8 @@ namespace HoweWorkDb.Repositories
             using (MySqlConnection conn = _db.GetConnection())
             {
                 using (MySqlCommand cmd = new MySqlCommand(
-                    "UPDATE Doctors Set Id = @doctor.Id, FirstName = @doctor.FirstName, LastName = @doctor.LastName, AcademicTitle = @doctor.AcademicTitle, " +
-                    "Email = @doctor.Email, PhoneNumber = @doctor.PhoneNumber, Specialization = @doctor.Specialization WHERE Id = @doctor.Id"))
+                    "UPDATE Doctors Set DoctorsId = @doctor.Id, FirstName = @doctor.FirstName, LastName = @doctor.LastName, AcademicTitle = @doctor.AcademicTitle, " +
+                    "Email = @doctor.Email, PhoneNumber = @doctor.PhoneNumber, Specialization = @doctor.Specialization WHERE DoctorsId = @doctor.Id"))
                 {
                     using (MySqlDataAdapter sda = new MySqlDataAdapter())
                     {
@@ -130,7 +130,7 @@ namespace HoweWorkDb.Repositories
             using (MySqlConnection conn = _db.GetConnection())
             {
                 using (MySqlCommand cmd = new MySqlCommand(
-                    "Delete FROM Doctors Where Id = @id"))
+                    "Delete FROM Doctors Where DoctorsId = @id"))
                 {
                     using (MySqlDataAdapter sda = new MySqlDataAdapter())
                     {

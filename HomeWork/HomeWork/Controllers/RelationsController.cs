@@ -13,6 +13,7 @@ namespace HomeWork.Controllers
     public class RelationsController : ControllerBase
     {
         private readonly RelationsRepository _db;
+
         public RelationsController(RelationsRepository db)
         {
             _db = db;
@@ -27,11 +28,11 @@ namespace HomeWork.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public IActionResult AdRelation([FromBody]Relations relation)
+        public IActionResult AdRelation(Relations relation)
         {
-            string name = relation.FirstName;
-            string placeName = relation.Name;
-            _db.Insert(name, placeName);
+            int doctorId = relation.DoctorId;
+            int workPlaceId = relation.WorkPlaceId;
+            _db.Insert(doctorId, workPlaceId);
             return Ok();
         }
         [HttpDelete("{id}")]
@@ -40,5 +41,6 @@ namespace HomeWork.Controllers
             _db.Remove(id);
             return Ok();
         }
+
     }
 }
